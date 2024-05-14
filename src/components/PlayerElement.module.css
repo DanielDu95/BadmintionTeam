@@ -1,0 +1,27 @@
+.playerBox {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+
+  align-items: center;
+  gap: 2.4rem;
+  height: 100%;
+  padding: 1.2rem 0 1.2rem 4.2rem;
+
+  font-size: 2.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 1.2rem rgba(0, 0, 0, 0.2);
+  /* background-color: aquamarine; */
+}
+
+.playerBox img {
+  width: 12.8rem;
+  height: 12.8rem;
+  border-radius: 50%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}

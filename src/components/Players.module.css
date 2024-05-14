@@ -1,0 +1,18 @@
+.container {
+  background-color: #fff5f5;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 5.8rem;
+  padding-top: 9.4rem;
+  text-transform: uppercase;
+}
+
+.playersContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 4.8rem;
+  gap: 4.8rem;
+}

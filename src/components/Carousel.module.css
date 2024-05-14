@@ -1,0 +1,81 @@
+.carouselContainer {
+  max-width: 1200px;
+  height: 100%;
+  /* background-color: antiquewhite; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.imageContainer {
+  width: 400px;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  /* justify-self: center;
+  align-self: center; */
+}
+
+.image {
+  object-fit: contain;
+  height: 100%;
+
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+  display: block;
+}
+
+.btns ion-icon {
+  font-size: 32px;
+  color: rgba(217, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+
+.btns ion-icon:hover {
+  color: rgba(217, 0, 0, 0.8);
+}
+
+.btns {
+  z-index: 100;
+  all: unset;
+  display: block;
+
+  /* position: absolute; */
+  /* top: 0;
+  bottom: 0;
+  padding: 1rem; */
+}
+
+.btns:hover {
+  animation: squish 200ms ease-in-out;
+}
+
+.btns * {
+  color: white;
+}
+.dots {
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  bottom: 0;
+}
+
+.dots button {
+  all: unset;
+  font-size: 15px;
+  color: #fff;
+}
+
+@keyframes squish {
+  50% {
+    scale: 1.4 0.6;
+  }
+}
