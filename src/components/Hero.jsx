@@ -12,7 +12,7 @@ const IMAGES = [image1, image2, image3, image4, image5];
 
 function Hero() {
   return (
-    <section className={styles.heroContainer}>
+    <section className={styles.heroContainer} id="hero">
       <div className={styles.hero}>
         <div className={styles.textBox}>
           <h1>Tongji Hospital Badminton Team</h1>
@@ -22,8 +22,17 @@ function Hero() {
             debitis totam. Vitae explicabo, rerum vel eos exercitationem quos
             neque sapiente possimus rem?
           </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+            nostrum dicta, doloribus magnam doloremque quo quisquam dolorum
+            debitis totam. Vitae explicabo, rerum vel eos exercitationem quos
+            neque sapiente possimus rem?
+          </p>
+          <p>some smaller text or image</p>
           <div className={styles.buttonContainer}>
-            <Button type="primary">Learn more &darr;</Button>
+            <Button type="primary">
+              <a href="#honer">Learn more &darr;</a>
+            </Button>
           </div>
         </div>
         <Carousel imageUrls={IMAGES} />

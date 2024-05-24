@@ -1,0 +1,25 @@
+.contactUsContainer {
+  background-color: #fff5f5;
+}
+
+.contactUsContainer h1 {
+  text-align: center;
+  font-size: 3.6rem;
+  margin-bottom: 5.8rem;
+  padding-top: 9.4rem;
+  text-transform: uppercase;
+}
+.itemsContainer {
+  display: grid;
+  height: 20rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: start;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}

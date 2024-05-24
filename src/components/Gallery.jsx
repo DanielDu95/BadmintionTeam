@@ -25,7 +25,7 @@ const images = [
 ];
 function Gallery() {
   return (
-    <div className={styles.masonryContainer}>
+    <div className={styles.masonryContainer} id="gallery">
       <h1>Gallery</h1>
       <Masonry columnsCount={5} gutter="10px">
         {images.map((image, i) => (
