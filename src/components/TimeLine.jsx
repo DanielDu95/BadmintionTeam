@@ -9,7 +9,7 @@ import { elements as timeLineElements } from "../data/timeLineElements";
 
 function TimeLine() {
   return (
-    <div className={styles.timeLineContainer}>
+    <div className={styles.timeLineContainer} id="honer">
       <h1>Honer wall</h1>
       <VerticalTimeline lineColor="#ff6b6b">
         {timeLineElements.map((el) => (

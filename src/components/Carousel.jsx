@@ -1,28 +1,46 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./Carousel.module.css";
 
 function Carousel({ imageUrls }) {
   const [imageIndex, setImageIndex] = useState(0);
+  const timeoutRef = useRef(null);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // const showNextImage = useCallback(() => {
+  //   setImageIndex((index) => {
+  //     if (index === imageUrls.length - 1) return 0;
+  //     else return index + 1;
+  //   });
+  // });
+
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
+
   const showNextImage = useCallback(() => {
-    setImageIndex((index) => {
-      if (index === imageUrls.length - 1) return 0;
-      else return index + 1;
+    setImageIndex((imageIndex) => {
+      if (imageIndex === imageUrls.length - 1) return 0;
+      else return imageIndex + 1;
     });
   });
   function showPrevImage() {
-    setImageIndex((index) => {
-      if (index === 0) return imageUrls.length - 1;
-      else return index - 1;
+    setImageIndex((imageIndex) => {
+      if (imageIndex === 0) return imageUrls.length - 1;
+      else return imageIndex - 1;
     });
   }
-  useEffect(
-    function () {
-      setTimeout(showNextImage, 3000);
-    },
-    [showNextImage]
-  );
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(() => {
+      showNextImage();
+      return () => {
+        resetTimeout();
+      };
+    }, 5000);
+  }, [showNextImage]);
   return (
     <div className={styles.carouselContainer}>
       <button className={styles.btns} onClick={showPrevImage}>

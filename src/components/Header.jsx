@@ -2,7 +2,7 @@ import styles from "./Header.module.css";
 
 function Header() {
   return (
-    <header>
+    <header id="header">
       <a href="#">
         <img className={styles.badmintonLogo} src="./logos/team-logo.jpg" />
         <img
@@ -15,22 +15,22 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <a className={styles.navItem} href="#">
+            <a className={styles.navItem} href="#hero">
               about
             </a>
           </li>
           <li>
-            <a className={styles.navItem} href="#">
+            <a className={styles.navItem} href="#honer">
               honor
             </a>
           </li>
           <li>
-            <a className={styles.navItem} href="#">
-              tournament
+            <a className={styles.navItem} href="#gallery">
+              gallary
             </a>
           </li>
           <li>
-            <a className={styles.navItem} href="#">
+            <a className={styles.navItem} href="#players">
               players
             </a>
           </li>

@@ -5,13 +5,15 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  justify-self: end;
 }
 
 .imageContainer {
-  width: 400px;
+  max-width: 400px;
   aspect-ratio: 3/4;
   overflow: hidden;
   position: relative;
+  border-radius: 15px;
 
   display: flex;
   /* justify-self: center;
@@ -22,8 +24,7 @@
   object-fit: contain;
   height: 100%;
 
-  border-radius: 15px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   display: block;
 }
 

@@ -4,7 +4,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff5f5;
+  color: #fff5f5;
+  background: rgb(222, 45, 45);
+  background: linear-gradient(
+    160deg,
+    rgba(222, 45, 45, 1) 10%,
+    rgba(173, 35, 35, 1) 47%,
+    rgba(229, 51, 51, 1) 90%
+  );
 }
 
 .logo {
@@ -30,13 +37,17 @@ header nav ul {
   list-style: none;
 }
 
+.navItem {
+  transition: all 0.5s;
+}
+
 .navItem:link,
 .navItem:visited {
   text-decoration: none;
-  color: #222;
+  color: #ffc9c9;
 }
 
 .navItem:hover,
 .navItem:active {
-  color: #999;
+  color: #ff6b6b;
 }

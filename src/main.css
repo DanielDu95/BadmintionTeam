@@ -21,3 +21,9 @@ body {
   font-weight: 400;
   color: #555;
 }
+
+.stick {
+  text-align: end;
+  position: sticky;
+  bottom: 2.4rem;
+}

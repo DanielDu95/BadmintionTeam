@@ -3,6 +3,26 @@
   cursor: pointer;
 }
 
+.primary a,
+.secondary a {
+  transition: all 0.5s;
+}
+
+.primary a:visited,
+.primary a:link,
+.secondary a:visited,
+.secondary a:link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.primary a:hover,
+.primary a:active,
+.secondary a:hover,
+.secondary a:active {
+  color: rgb(238, 181, 181);
+}
+
 .primary {
   border: 1px solid #fff;
   color: #fff;
@@ -13,5 +33,15 @@
 }
 
 .secondary {
-  background-color: aqua;
+  background-color: rgba(250, 82, 82, 0.9);
+  border: none;
+  color: #fff;
+  font-size: 4.7rem;
+  /* position: -webkit-sticky; */
+  position: sticky;
+  bottom: 2.4rem;
+  margin: 0 auto;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
 }
